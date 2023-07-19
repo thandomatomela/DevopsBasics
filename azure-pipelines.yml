@@ -9,10 +9,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-jobs:
-- job: Job
-  dependsOn: InitialJob
-  
 steps:
 - task: Maven@3
   inputs:
@@ -24,3 +20,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+jobs:
+- job: Job
+  dependsOn: InitialJob
