@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+jobs:
+- job: SubsequentB
+  dependsOn: InitialJob
+  
 steps:
 - task: Maven@3
   inputs:
