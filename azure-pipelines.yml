@@ -21,6 +21,4 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-jobs:
-- job: Job
-  dependsOn: InitialJob
+
